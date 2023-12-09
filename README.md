@@ -1,11 +1,15 @@
-# image_processing_itmo
+# ДЗ 1
 
-Ионов Тимур Русланович
+### Author:
+- Ионов Тимур Русланович
 
-Task: multiclass classification
+### Task:
+- multiclass classification
 
+### Dataset:
+- Fashion MNIST
 
-Classes:
+### Classes:
 - T-shirt/top
 - Trouser
 - Pullover
@@ -18,27 +22,27 @@ Classes:
 - Ankle boot
 
 
-Augmentations:
+### Augmentations:
 - RandomHorizontalFlip() 
 - RandomVerticalFlip()
 - RandomRotation(90)
 
-Architectures (customized):
+### Architectures (customized):
 - SimpleCNN
 - [SpatialAttentionCNN](https://arxiv.org/abs/1807.06521v2)  (sa)
 - [GatedCNN](https://arxiv.org/abs/1612.08083v3)
 
 
-Hyperparameters: 
+### Hyperparameters: 
 - optimizer: AdamW
 - learning rate: 3e-4
 - max epochs: 100
 - batch size: 64
 
-Losses:
+### Losses:
 - CrossEntropy
 
-Metrics:
+### Metrics:
 ![image](assets/tensorboard.jpg)
 
 Column prefix is model name 
@@ -55,6 +59,16 @@ Column prefix is model name
 | Sneaker     | 0.969            | 0.969         | 0.969     | 0.968        | 0.968     | 0.968 | 0.949           | 0.949        | 0.949    |
 | Bag         | 0.976            | 0.976         | 0.976     | 0.960        | 0.960     | 0.960 | 0.960           | 0.960        | 0.960    |
 | Ankle boot  | 0.955            | 0.955         | 0.955     | 0.957        | 0.957     | 0.957 | 0.966           | 0.966        | 0.966    |
+
+### Debug plot:
+#### simple:
+![image](assets/simple_pred.jpg)
+
+#### spatial attention:
+![image](assets/sa_pred.jpg)
+
+#### gated:
+![image](assets/gated_pred.jpg)
 
 Resume:
 Gated CNN использует механизмы "ворот", позволяющие контролировать поток информации через слои сети.
